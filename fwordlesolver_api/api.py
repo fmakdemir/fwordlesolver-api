@@ -4,11 +4,6 @@ from fwordlesolver.solver import WordleSolver
 api = NinjaAPI()
 
 
-@api.get("/hello")
-def hello(request):
-    return "Hello world"
-
-
 @api.post("/wordle")
 def solve_world(request, words: list[str], places: list[str]):
     if not len(words):
