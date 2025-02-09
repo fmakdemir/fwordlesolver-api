@@ -19,4 +19,6 @@ def solve_world(request, words: list[str], places: list[str]):
     return {
         "sug": solver.get_suggestions(),
         "alt": solver.get_not_used_suggestion(),
+        "remaining": len(solver.words),
+        "used_letters": solver.used_letters,
     }
