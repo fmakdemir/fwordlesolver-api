@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.2.1...v0.2.2) (2025-02-09)
+
+
+### Bug Fixes
+
+* removed SSL redirect to prevent redirect loop ([3b00a00](https://github.com/fmakdemir/fwordlesolver-api/commit/3b00a00ca29f387ae3ae3b8dbe785b07f113dae8))
+
 ## [0.2.1](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.2.0...v0.2.1) (2025-02-09)
 
 
