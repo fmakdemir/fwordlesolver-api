@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.1.0...v0.2.0) (2025-02-09)
+
+
+### Features
+
+* added wordle-solver as base path ([653fe09](https://github.com/fmakdemir/fwordlesolver-api/commit/653fe092b0d8c26a9e645fa35c719b335954897b))
+
+
+### Bug Fixes
+
+* added missing pytest ([0c404a0](https://github.com/fmakdemir/fwordlesolver-api/commit/0c404a07e747779a944246b9b812120db659e81c))
+
 ## 0.1.0 (2025-02-09)
 
 
