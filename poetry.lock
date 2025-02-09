@@ -140,14 +140,14 @@ typing = ["typing-extensions (>=4.12.2)"]
 
 [[package]]
 name = "fwordlesolver"
-version = "0.3.0"
+version = "0.4.7"
 description = "Word puzzle solver library and CLI"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "fwordlesolver-0.3.0-py3-none-any.whl", hash = "sha256:5e4b258f28f1e70beb823aec26329184efba672fd9e8cd2396e05fd25d7f645b"},
-    {file = "fwordlesolver-0.3.0.tar.gz", hash = "sha256:576ff5664569512308c45d795de38455e20bf359c6dd50eb782ba8c831b4b3d8"},
+    {file = "fwordlesolver-0.4.7-py3-none-any.whl", hash = "sha256:5ae3851a99d594e70bd8cd1012edfdb1f583c29ee8e50c1b7939c4f6ec2b6974"},
+    {file = "fwordlesolver-0.4.7.tar.gz", hash = "sha256:fef8e99c35dabf11557a06249dd3c080b3a3c40694d57934f442be550a965211"},
 ]
 
 [package.dependencies]
@@ -607,4 +607,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "e677bf660b91dd369854dc9b4d9cb450b5b6129cc7fe5a07383f5eb1770afebe"
+content-hash = "63b42f923b5fce063b4fb31e0e3dc38a92324badda860f955c5a40ab32e67a7a"

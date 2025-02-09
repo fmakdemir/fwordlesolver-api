@@ -1,43 +1,64 @@
-name: CD
+name: 🐋 Publish Docker Image
 
 on:
+  workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - 'master'
+    tags:
+      - 'v*'
+  pull_request:
+    branches:
+      - 'master'
 
-permissions:
-  contents: write
-  pull-requests: write
-
-concurrency:
-  cancel-in-progress: true
-  group: ${{ github.workflow }}-${{ github.ref_name }}
+# env:
+#   REGISTRY: ghcr.io
+#   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  release-please:
-    name: Release Please
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.9"] # , "3.10", "3.11", "3.12", "3.13"]
-        poetry-version: ["latest"] # , "main", "1.8.4"]
-        os: [ubuntu-latest] # , macos-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
+  docker:
+    name: 🐋 Docker
+    runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
-        id: release
-        with:
-          release-type: python
-      - uses: actions/checkout@v4
+      -
+        name: Checkout
+        uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
-      - name: 📦 Run image
+          python-version: 3.12
+
+      - name: 📦 Setup poetry
         uses: abatilo/actions-poetry@v3
-        with:
-          poetry-version: ${{ matrix.poetry-version }}
-      - name: View poetry --help
-        run: poetry --help
-      - name: Install dependencies
+
+      - name: 📜 Install dependencies
         run: poetry install
-      - name: Publich package
-        run: poetry publish --build
+
+      - name: 🧪 Run tests
+        run: poetry run pytest
+
+      - name: 🐋 Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/fwordlesolver-api
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+
+      - name: 🐋🔐 Login to DockerHub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: 🐋⚒️ Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
