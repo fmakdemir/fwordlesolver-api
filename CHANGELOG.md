@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.2.2...v0.3.0) (2025-02-09)
+
+
+### Features
+
+* added remaining words and used_letters to wordle api ([f110d45](https://github.com/fmakdemir/fwordlesolver-api/commit/f110d459a267d3cf84a6aa9e2994c5ad38045d8c))
+
 ## [0.2.2](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.2.1...v0.2.2) (2025-02-09)
 
 
