@@ -27,8 +27,8 @@ def solve_wordle(request, req: WordleSolveRequest) -> WordleSolveResponse:
     for _w, _p in zip(req.words, req.places):
         solver.apply_guess(_w, _p)
     return WordleSolveResponse(
-        solver.get_suggestions(),
-        solver.get_not_used_suggestion(),
-        len(solver.words),
-        solver.used_letters,
+        suggestions=solver.get_suggestions(),
+        alternatives=solver.get_not_used_suggestion(),
+        remaining=len(solver.words),
+        used_letters=solver.used_letters,
     )
