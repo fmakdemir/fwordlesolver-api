@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.3.0...v0.4.0) (2025-02-10)
+
+
+### Features
+
+* fixes for generated schema ([eff272b](https://github.com/fmakdemir/fwordlesolver-api/commit/eff272b0856d9c4d7c9c85808bd96ff023f8c193))
+
 ## [0.3.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.2.2...v0.3.0) (2025-02-09)
 
 
