@@ -14,7 +14,7 @@ class WordleSolveResponse(Schema):
     suggestions: list[str]
     alternatives: list[str]
     remaining: int
-    used_letters: set[str]
+    used_letters: list[str]
 
 
 @api.post("/wordle", response=WordleSolveResponse)
@@ -30,5 +30,5 @@ def solve_wordle(request, req: WordleSolveRequest) -> WordleSolveResponse:
         suggestions=solver.get_suggestions(),
         alternatives=solver.get_not_used_suggestion(),
         remaining=len(solver.words),
-        used_letters=solver.used_letters,
+        used_letters=list(solver.used_letters),
     )
