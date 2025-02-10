@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.4.1...v0.4.2) (2025-02-10)
+
+
+### Bug Fixes
+
+* replaced unserializable set with list ([4616f16](https://github.com/fmakdemir/fwordlesolver-api/commit/4616f1618fb05eaedccfb8fdf5afd7495b71b812))
+
 ## [0.4.1](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.4.0...v0.4.1) (2025-02-10)
 
 
