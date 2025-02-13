@@ -13,13 +13,22 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref_name }}
 
 jobs:
-  build-release:
-    # trigger only if bot is not the author of the commit
-    if: ${{ github.event.head_commit.author.username != 'github-actions[bot]' }}
+  build_release:
     name: Build Package Release
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
         with:
           release-type: python
+
+  docker_release:
+    needs: build_release
+    if: ${{ needs.build_release.outputs.release_created }}
+    uses: ./.github/workflows/publish.yml
+    with:
+      tag_name: ${{ needs.build_release.outputs.tag_name }}
+    secrets: inherit
