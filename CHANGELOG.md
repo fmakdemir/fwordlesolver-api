@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.4.2...v0.4.3) (2025-02-13)
+
+
+### Bug Fixes
+
+* auto publish docker ([581d884](https://github.com/fmakdemir/fwordlesolver-api/commit/581d8846228457c1a1c2ca0414351b07057f6c4c))
+
 ## [0.4.2](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.4.1...v0.4.2) (2025-02-10)
 
 
