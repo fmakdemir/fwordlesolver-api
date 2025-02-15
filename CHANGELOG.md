@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.4.3...v0.4.4) (2025-02-15)
+
+
+### Bug Fixes
+
+* static file folder fix ([be66383](https://github.com/fmakdemir/fwordlesolver-api/commit/be66383d4bf6434d0d96574c46ce0d2f7c3617f1))
+
 ## [0.4.3](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.4.2...v0.4.3) (2025-02-13)
 
 
