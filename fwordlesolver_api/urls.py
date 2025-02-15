@@ -22,11 +22,11 @@ from .api import api
 
 urlpatterns = [
     path(
-        "wordle-solver/",
+        "wordle-solver/api",
         include(
             [
-                path("admin/", admin.site.urls),
-                path("api/", api.urls),
+                path("/", api.urls),
+                path("/admin/", admin.site.urls),
             ]
         ),
     ),

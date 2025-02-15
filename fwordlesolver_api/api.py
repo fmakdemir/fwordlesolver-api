@@ -32,3 +32,8 @@ def solve_wordle(request, req: WordleSolveRequest) -> WordleSolveResponse:
         remaining=len(solver.words),
         used_letters=list(solver.used_letters),
     )
+
+
+@api.get("/ping")
+def ping(request):
+    return {"response": "pong"}
