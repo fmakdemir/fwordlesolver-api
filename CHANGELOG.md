@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.5.0...v1.0.0) (2025-02-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* initial full release with static file support
+
+### Features
+
+* initial full release with static file support ([0c88548](https://github.com/fmakdemir/fwordlesolver-api/commit/0c885486e2e00acc644645a538907a4ac103af13))
+
 ## [0.5.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.4.4...v0.5.0) (2025-02-15)
 
 
