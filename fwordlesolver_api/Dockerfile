@@ -21,5 +21,7 @@ RUN mkdir /app
 WORKDIR /app
 COPY / .
 RUN poetry install --no-dev --no-root --no-interaction --no-ansi
+RUN python manage.py migrate
+RUN python manage.py collectstatic --no-input
 EXPOSE 80
 CMD python manage.py runserver 0.0.0.0:80
