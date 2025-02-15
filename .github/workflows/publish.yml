@@ -40,8 +40,8 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/fwordlesolver-api
           tags: |
             ${{ inputs.tag_name || '' }}
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern=v{{version}}
+            type=semver,pattern=v{{major}}.{{minor}}
 
       - name: 🐋🔐 Login to DockerHub
         if: github.event_name != 'pull_request'
