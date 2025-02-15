@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.4.4...v0.5.0) (2025-02-15)
+
+
+### Features
+
+* moved all endpoints under wordle-solver/api ([4bf6d7d](https://github.com/fmakdemir/fwordlesolver-api/commit/4bf6d7d870203cb0cc4879d441e08d1e390fb526))
+
 ## [0.4.4](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.4.3...v0.4.4) (2025-02-15)
 
 
