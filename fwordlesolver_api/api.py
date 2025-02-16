@@ -1,7 +1,14 @@
 from ninja import NinjaAPI, Schema
 from fwordlesolver.solver import WordleSolver
 
-api = NinjaAPI(title="Wordle API", description="This is an API for Wordle")
+
+class FWordleAPI(NinjaAPI):
+    def get_openapi_operation_id(self, operation):
+        name = operation.view_func.__name__
+        return name.replace(".", "_")
+
+
+api = FWordleAPI(title="Wordle API", description="This is an API for Wordle")
 
 
 class WordleSolveRequest(Schema):
