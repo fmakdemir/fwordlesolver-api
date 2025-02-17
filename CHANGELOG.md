@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.0.0...v1.0.1) (2025-02-16)
+
+
+### Bug Fixes
+
+* long operation id fix ([3a2e37b](https://github.com/fmakdemir/fwordlesolver-api/commit/3a2e37b8a85bc265ec412eb9aa8fc6926e9e7132))
+
 ## [1.0.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v0.5.0...v1.0.0) (2025-02-15)
 
 

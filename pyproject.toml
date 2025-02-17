@@ -1,6 +1,6 @@
 [project]
 name = "fwordlesolver_api"
-version = "1.0.0"
+version = "1.0.1"
 requires-python = ">=3.12"
 dependencies = [
     "django-ninja (>=1.3.0,<2.0.0)",
