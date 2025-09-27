@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.1.0...v1.1.1) (2025-09-27)
+
+
+### Bug Fixes
+
+* fixed github action for uv ([885ae45](https://github.com/fmakdemir/fwordlesolver-api/commit/885ae452bcaa93661fc3d732e2ae31b4b17d086c))
+* fixed github action for uv ([d83d2bf](https://github.com/fmakdemir/fwordlesolver-api/commit/d83d2bfc3bd9452a2b9e46b8f772b39159026609))
+
 ## [1.1.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.0.1...v1.1.0) (2025-09-27)
 
 
