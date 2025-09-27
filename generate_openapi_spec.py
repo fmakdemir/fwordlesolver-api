@@ -1,11 +1,15 @@
-import yaml
+import argparse
+import importlib
+import importlib.util
+import json
+import sys
+import time
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
-import importlib.util
-import argparse
-from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-import time
+from watchdog.observers import Observer
 
 
 def generate_openapi_spec():
@@ -36,10 +40,12 @@ def generate_openapi_spec():
             routes=app.routes,
         )
 
-        # Save the OpenAPI spec as YAML
-        output_file = "openapi_spec.yaml"
-        with open(output_file, "w") as yaml_file:
-            yaml.dump(openapi_spec, yaml_file, default_flow_style=False)
+        # Save the OpenAPI spec as JSON
+        # TODO: add yaml output as well
+        spec_json = json.dumps(openapi_spec, indent=2)
+        output_file = Path(__file__).parent / "openapi_spec.json"
+        # write with newline for formatter
+        output_file.write_text(f"{spec_json}\n")
 
         print(f"OpenAPI spec has been generated and saved to {output_file}")
     except Exception as e:
@@ -74,9 +80,6 @@ def watch_mode():
 
 
 def reload_and_generate():
-    import sys
-    import importlib
-
     # Reload all fastapi_app modules
     for name, module in list(sys.modules.items()):
         if name.startswith("fastapi_app") and module:
