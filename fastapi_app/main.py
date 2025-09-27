@@ -1,6 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from fwordlesolver.solver import WordleSolver
-from .schemas import WordleSolveRequest, WordleSolveResponse
+from .schemas import (
+    HealthResponse,
+    PingResponse,
+    WordleSolveRequest,
+    WordleSolveResponse,
+)
 
 app = FastAPI(
     title="Wordle API",
@@ -9,7 +14,11 @@ app = FastAPI(
 )
 
 
-@app.post("/wordle-solver/api/wordle", response_model=WordleSolveResponse)
+@app.post(
+    "/wordle-solver/api/wordle",
+    operation_id="solve_wordle",
+    response_model=WordleSolveResponse,
+)
 async def solve_wordle(req: WordleSolveRequest):
     if len(req.places) != len(req.words):
         raise HTTPException(
@@ -30,6 +39,13 @@ async def solve_wordle(req: WordleSolveRequest):
     )
 
 
-@app.get("/wordle-solver/api/ping")
+@app.get("/wordle-solver/api/ping", operation_id="ping", response_model=PingResponse)
 async def ping():
-    return {"response": "pong"}
+    return PingResponse(response="pong")
+
+
+@app.get(
+    "/wordle-solver/api/health", operation_id="health", response_model=HealthResponse
+)
+async def health():
+    return HealthResponse(status="ok", response="ok")

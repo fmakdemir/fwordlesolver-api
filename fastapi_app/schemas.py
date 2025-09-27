@@ -12,3 +12,12 @@ class WordleSolveResponse(BaseModel):
     alternatives: list[str]
     remaining: int
     used_letters: list[str]
+
+
+class PingResponse(BaseModel):
+    response: str
+
+
+class HealthResponse(BaseModel):
+    status: str
+    response: str
