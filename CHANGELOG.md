@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.0.1...v1.1.0) (2025-09-27)
+
+
+### Features
+
+* Migrated from Django to FastAPI ([2617da4](https://github.com/fmakdemir/fwordlesolver-api/commit/2617da4a28316953b06c4e5d82b2ea9dbeffa929))
+* migrated from poetry to uv and added basic testing ([5002229](https://github.com/fmakdemir/fwordlesolver-api/commit/5002229f58bb14f98644c65b399d0314fb1a9826))
+
 ## [1.0.1](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.0.0...v1.0.1) (2025-02-16)
 
 
