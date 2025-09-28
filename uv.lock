@@ -231,40 +231,28 @@ source = { editable = "." }
 dependencies = [
     { name = "fastapi" },
     { name = "fwordlesolver" },
+    { name = "pre-commit" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
     { name = "python-json-logger" },
+    { name = "ruff" },
     { name = "uvicorn" },
     { name = "watchdog" },
     { name = "whitenoise" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "pre-commit" },
-    { name = "ruff" },
-]
-test = [
-    { name = "pytest" },
-    { name = "pytest-cov" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "fastapi", specifier = ">=0.111.0,<0.112.0" },
     { name = "fwordlesolver", specifier = ">=0.4.7,<0.5.0" },
+    { name = "pre-commit", specifier = ">=4.1.0" },
+    { name = "pytest", specifier = ">=8.3.4" },
+    { name = "pytest-cov", specifier = ">=4.1.0" },
     { name = "python-json-logger", specifier = ">=3.3.0" },
+    { name = "ruff", specifier = ">=0.9.4" },
     { name = "uvicorn", specifier = ">=0.30.1,<0.31.0" },
     { name = "watchdog", specifier = ">=6.0.0" },
     { name = "whitenoise", specifier = ">=6.9.0,<7.0.0" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "pre-commit", specifier = ">=4.1.0" },
-    { name = "ruff", specifier = ">=0.9.4" },
-]
-test = [
-    { name = "pytest", specifier = ">=8.3.4" },
-    { name = "pytest-cov", specifier = ">=4.1.0" },
 ]
 
 [[package]]
