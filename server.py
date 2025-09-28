@@ -26,7 +26,7 @@ if __name__ == "__main__":
     uvicorn.run(
         "fastapi_app.main:app",
         host="0.0.0.0",
-        port=8000,
+        port=80,
         log_config="log_config.yaml",
         reload=args.reload,
     )
