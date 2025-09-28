@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.2.0...v1.2.1) (2025-09-28)
+
+
+### Bug Fixes
+
+* missing dependency issues ([91eda26](https://github.com/fmakdemir/fwordlesolver-api/commit/91eda263765d479c990a6e655b3f7796418b0867))
+
 ## [1.2.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.1.1...v1.2.0) (2025-09-28)
 
 
