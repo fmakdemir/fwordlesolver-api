@@ -7,11 +7,8 @@ dependencies = [
     "whitenoise>=6.9.0,<7.0.0",
     "fastapi>=0.111.0,<0.112.0",
     "uvicorn>=0.30.1,<0.31.0",
-    "ruff>=0.9.4",
-    "pre-commit>=4.1.0",
-    "pytest>=8.3.4",
-    "pytest-cov>=4.1.0",
     "watchdog>=6.0.0",
+    "python-json-logger>=3.3.0",
 ]
 
 
@@ -21,3 +18,19 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["fastapi_app"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[dependency-groups]
+test = ["pytest>=8.3.4", "pytest-cov>=4.1.0"]
+dev = ["ruff>=0.9.4", "pre-commit>=4.1.0"]
