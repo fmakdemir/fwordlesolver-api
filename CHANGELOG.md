@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.2.0](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.1.1...v1.2.0) (2025-09-28)
+
+
+### Features
+
+* added openapi generation ([3fa4247](https://github.com/fmakdemir/fwordlesolver-api/commit/3fa42478c9c6a57e255ae4e89df99166da927307))
+* added proper logging with json format, server, etc. ([aad7b8c](https://github.com/fmakdemir/fwordlesolver-api/commit/aad7b8c2016aab31b8267135df8095ecbaf30458))
+* api endpoint refactor for clarity ([36452f5](https://github.com/fmakdemir/fwordlesolver-api/commit/36452f5324924bc5447fe9a0dae19801f6525437))
+
+
+### Bug Fixes
+
+* fixed port of docker ([6f03afc](https://github.com/fmakdemir/fwordlesolver-api/commit/6f03afcea41c531f56c347ed2f1916030b8dcab7))
+* moved openapi spec to json for backward compatability ([8e982a3](https://github.com/fmakdemir/fwordlesolver-api/commit/8e982a360e603d76c15c75088e8c03a2b27f52c8))
+
 ## [1.1.1](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.1.0...v1.1.1) (2025-09-27)
 
 
