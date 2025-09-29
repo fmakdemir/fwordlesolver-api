@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.2.1...v1.2.2) (2025-09-29)
+
+
+### Bug Fixes
+
+* renamed openapi spec file ([fcc6c2b](https://github.com/fmakdemir/fwordlesolver-api/commit/fcc6c2b5b515071cf47e97ccdc52a8480a07e896))
+
 ## [1.2.1](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.2.0...v1.2.1) (2025-09-28)
 
 
