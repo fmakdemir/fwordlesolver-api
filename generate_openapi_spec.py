@@ -58,7 +58,7 @@ def generate_openapi_spec():
         # Save the OpenAPI spec as JSON
         # TODO: add yaml output as well
         spec_json = json.dumps(openapi_spec, indent=2)
-        output_file = ROOT_PATH / "openapi_spec.json"
+        output_file = ROOT_PATH / "openapi.json"
         # write with newline for formatter
         output_file.write_text(f"{spec_json}\n")
 

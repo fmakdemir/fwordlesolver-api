@@ -17,28 +17,26 @@ ENV UV_COMPILE_BYTECODE=1
 # use copy mode for linking packages (silence warning)
 ENV UV_LINK_MODE=copy
 # enable caching for the managed python
-ENV UV_PYTHON_CACHE_DIR=/root/.cache/uv/python
+ENV UV_PYTHON_CACHE_DIR=/uv-cache/python
+ENV UV_CACHE_DIR=/uv-cache
 # use the system python
 ENV UV_SYSTEM_PYTHON=1
 
 RUN mkdir /app
+RUN mkdir /uv-cache
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the pyproject.toml and uv.lock files
-COPY pyproject.toml uv.lock /app/
-
-# Install python and pip with uv, using a cache to speed up subsequent builds
-RUN --mount=type=cache,target=/root/.cache/uv \
-    uv python install
+# Copy dependency and config files
+COPY pyproject.toml uv.lock log_config.yaml /app/
 
 # Install dependencies with caching
-RUN --mount=type=cache,target=/root/.cache/uv \
+RUN --mount=type=cache,target=/uv-cache \
     uv sync
 
 # Copy the rest of the application code
-COPY generate_openapi_spec.py /app/
+COPY *.py /app/
 COPY ./fastapi_app/ /app/fastapi_app/
 
 # Expose the port the app runs on
