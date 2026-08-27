@@ -57,3 +57,17 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: 🚀 Notify Argo Events (CD Trigger)
+        if: github.event_name != 'pull_request'
+        run: |
+          TAG="${{ inputs.tag_name }}"
+          curl -f -s -X POST https://events.codeuni.net/release \
+            -H "Authorization: Bearer ${{ secrets.ARGO_EVENTS_WEBHOOK_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"application\": \"fws-api\",
+              \"version\": \"${TAG}\",
+              \"image\": \"${{ secrets.DOCKERHUB_USERNAME }}/fwordlesolver-api:${TAG}\",
+              \"targetNamespace\": \"fwordlesolver\"
+            }"
