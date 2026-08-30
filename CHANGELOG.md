@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.2.2...v1.2.3) (2026-08-30)
+
+
+### Documentation
+
+* add AGENTS.md guide ([e5717e0](https://github.com/fmakdemir/fwordlesolver-api/commit/e5717e0e3e787073af8a441558d5c6199f502beb))
+
 ## [1.2.2](https://github.com/fmakdemir/fwordlesolver-api/compare/v1.2.1...v1.2.2) (2025-09-29)
 
 
